@@ -5,13 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Controle Financeiro Semanal</title>
   <script>
-    // Redireciona para index.html preservando o path
+    // GitHub Pages redireciona 404s para este arquivo
+    // Redirecionamos para index.html para que o Vue Router possa gerenciar a rota
+    var base = '/controle-financeiro-semanal-vue/';
     var path = window.location.pathname;
-    var base = '/home/';
-    if (base !== '/') {
-      path = path.replace(base, '/');
+    var search = window.location.search;
+    var hash = window.location.hash;
+    
+    // Se o path não começa com base, pode ser uma rota sem base path
+    // Nesse caso, precisamos adicionar o base path
+    if (!path.startsWith(base) && base !== '/') {
+      // Extrai o path relativo (remove leading slash se existir)
+      var relativePath = path.startsWith('/') ? path.substring(1) : path;
+      // Se não começa com o nome do repo, adiciona
+      if (!relativePath.startsWith('controle-financeiro-semanal-vue/')) {
+        path = base + relativePath;
+      } else {
+        path = '/' + relativePath;
+      }
     }
-    window.location.replace(base + 'index.html' + window.location.search + window.location.hash);
+    
+    // Garante que termina com / para adicionar index.html
+    if (!path.endsWith('/')) {
+      path = path + '/';
+    }
+    
+    // Redireciona para index.html
+    window.location.replace(path + 'index.html' + search + hash);
   </script>
 </head>
 <body>
