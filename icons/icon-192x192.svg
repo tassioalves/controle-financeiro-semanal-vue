@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  
+  <g transform="translate(96, 96)">
+    <!-- Símbolo de dinheiro/cifrão -->
+    <circle cx="0" cy="0" r="67.19999999999999" fill="#3b82f6" opacity="0.1"/>
+    <circle cx="0" cy="0" r="57.599999999999994" fill="none" stroke="#3b82f6" stroke-width="3.84"/>
+    <text x="0" y="19.200000000000003" font-family="Arial, sans-serif" font-size="76.80000000000001" font-weight="bold" fill="#1e40af" text-anchor="middle" dominant-baseline="middle">R$</text>
+  </g>
+</svg>

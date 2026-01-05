@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/controle-financeiro-semanal-vue/sw.js', { scope: '/controle-financeiro-semanal-vue/' })})}
